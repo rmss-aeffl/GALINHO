@@ -13,7 +13,7 @@ namespace GALINHO
     public partial class FormJogo2Players : Form
     {
         private TabuleiroJogoGalo tab;
-        int jogador = 1;
+        private int jogador = 1;
         public FormJogo2Players()
         {
             InitializeComponent();
@@ -36,23 +36,25 @@ namespace GALINHO
 
             if (tab.verificarCasaVazia(linha, coluna) == true)
             {
-                if (jogador == 1)
-                    tab.jogarCasa(linha, coluna, 1);
-                else if (jogador == 2)
-                    tab.jogarCasa(linha, coluna, 2);
+               tab.jogarCasa(linha, coluna, jogador);
                 if (jogador == 1)
                     pictureBox.Image = Image.FromFile("x.png");
                 else
                     pictureBox.Image = Image.FromFile("o.png");
-                if (jogador == 1)
+                if (jogador == 1) 
                     jogador = 2;
                 else if (jogador == 2)
                     jogador = 1;
             }
 
+            if (tab.testarVencedor() == "E")
+                MessageBox.Show("Empate");
+            if (tab.testarVencedor() == "X")
+                MessageBox.Show("Player 1 Ganhou");
+            if (tab.testarVencedor() == "O")
+                MessageBox.Show("Player 2 Ganhou");
             label1.Text = "É a vez do jogador " + jogador.ToString() +
                             " ( " +  ((jogador == 1) ? "X" : "O") + " )";
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

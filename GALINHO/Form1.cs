@@ -24,5 +24,12 @@ namespace GALINHO
             jogo.Show();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormAbout jogo = new FormAbout();
+
+            jogo.Show();
+        }
     }
 }

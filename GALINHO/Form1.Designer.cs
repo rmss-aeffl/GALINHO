@@ -63,6 +63,7 @@ namespace GALINHO
             this.button3.TabIndex = 2;
             this.button3.Text = "Regras";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -93,6 +94,7 @@ namespace GALINHO
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 

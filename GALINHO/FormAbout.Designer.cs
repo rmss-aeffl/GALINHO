@@ -61,6 +61,10 @@ namespace GALINHO
             this.Controls.Add(this.label1);
             this.Name = "FormAbout";
             this.Text = "FormAbout";
+            this.Load += new System.EventHandler(this.FormAbout_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormAbout_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormAbout_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormAbout_KeyUp);
             this.ResumeLayout(false);
 
         }

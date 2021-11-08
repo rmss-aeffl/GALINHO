@@ -177,6 +177,7 @@ namespace GALINHO
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormJogo2Players";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormJogo2Players";
             this.Load += new System.EventHandler(this.FormJogo2Players_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
